@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useRef, useState } from "react";
 import "./app.css";
 
@@ -11,7 +10,6 @@ function App() {
   const rotateRoullete = () => {
     if (ref && ref.current) {
       const ctx = ref.current.getContext("2d");
-      console.log(ctx);
 
       if (ctx) {
         ctx.canvas.style.transform = `initial`;
@@ -39,8 +37,8 @@ function App() {
       const arc = Math.PI / (list.length / 2);
 
       if (ctx) {
-        console.log(ctx);
         list.forEach((li, idx) => {
+          console.log(li);
           ctx.beginPath();
           if (colorList.length === 0) {
             const tempList: string[] = [];
@@ -66,6 +64,7 @@ function App() {
         ctx.textAlign = "center";
 
         list.forEach((li, idx) => {
+          console.log(li);
           const angle = arc * idx + arc / 2;
 
           ctx.save();
