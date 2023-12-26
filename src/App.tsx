@@ -24,7 +24,9 @@ function App() {
           ctx.canvas.style.transform = `rotate(-${rotate}deg)`;
           ctx.canvas.style.transition = `2s`;
 
-          setTimeout(() => alert(`당첨자는 바로! ${list[ran]} 입니다!`), 2000);
+          setTimeout(() => {
+            alert(`당첨자는 바로! ${list[ran]} 입니다!`);
+          }, 2000);
         }, 1);
       }
     }
